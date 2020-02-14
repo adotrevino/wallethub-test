@@ -1,0 +1,43 @@
+<main>
+    <img id="logo" src="../../assets/img/wallethub.png" alt="wallethub logo">
+    <app-title class="welcome-title">Welcome to our Budget App</app-title>
+    
+    <mat-card>
+        <mat-card-title>
+            Login
+        </mat-card-title>
+        
+        <form [formGroup]="login" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+            <mat-form-field appearance="fill">
+                <input 
+                matInput
+                placeholder="Email"
+                formControlName="email"
+                type="email"
+                autocomplete="off">
+                <mat-error>
+                    Please enter a valid email address
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <input
+                matInput
+                placeholder="Password"
+                formControlName="password"
+                type="password"
+                autocomplete="off"
+                >
+                <mat-error>
+                    The password must contain at least 6 charachters
+                </mat-error>
+            </mat-form-field>
+            <button class="submit"
+            mat-stroked-button
+            type="submit"
+            >Submit</button>
+        </form>
+    </mat-card>
+    <p class="instructions">
+        To access the application use any <b>email</b> address and a <b>password</b> longer than 6 characters
+    </p>
+</main>

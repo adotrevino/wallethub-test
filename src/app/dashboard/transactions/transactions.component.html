@@ -1,0 +1,14 @@
+<main>
+    <div>
+    <h2 @fade >Transactions</h2>
+    </div>
+    <section id="total-value-bar">
+        <div id="value"><h3>Total:</h3> <h4 [ngStyle]="{'color': total < 0 ? '#F20505' : '#333' }">{{total | currency}}</h4></div>
+        <div id="add-item" >
+            <button @fade class="btn-add" mat-flat-button (click)="newItem($event)">Add Income</button>
+            <button @fade class="btn-add" mat-flat-button (click)="newItem($event)">Add Expense</button>
+        </div>
+    </section> 
+ 
+    <app-table [itemArray]="transactions"></app-table>
+</main>

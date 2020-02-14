@@ -1,0 +1,17 @@
+a{
+    color: #fff;
+    text-decoration: none;
+}
+mat-toolbar{
+    display:flex; 
+    padding: 15px 75px;
+}
+.logo{
+    order: 1;
+}
+
+.logout{
+    order: 3;
+    margin-left: auto;
+}
+

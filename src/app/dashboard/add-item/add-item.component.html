@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-title>
+        Add Item
+    </mat-card-title>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <input
+            matInput
+            type="text"
+            placeholder="Description"
+            formControlName="description"
+            autocomplete="off"
+            >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <span matPrefix>$ &nbsp;</span>
+            <input
+            matInput
+            type="number"
+            placeholder="Amount"
+            formControlName="amount"
+            CurrencyOnly
+            autocomplete="off"
+            >
+        </mat-form-field>
+        <button mat-stroked-button type="submit" [disabled]="form.invalid">Add</button>
+    </form>
+</mat-card>
